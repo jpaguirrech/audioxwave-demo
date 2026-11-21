@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081426">
+  <meta name="robots" content="noindex">
+  <title>AudioXwave · Prueba de escucha</title>
+  <meta name="description" content="Prueba una experiencia activada por sonido.">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./decoder.js"></script>
+  <script type="module" src="./receiver.mjs"></script>
+</head>
+<body>
+  <main class="receiver">
+    <img class="brand" src="./logo.png" width="264" height="60" alt="AudioXwave">
+    <div class="visual" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <section aria-live="polite" aria-atomic="true">
+      <h1 id="status">Detecta la cuña</h1>
+      <p id="instructions">Activa el micrófono y reproduce la cuña desde otro dispositivo cercano.</p>
+      <div id="result" class="result" hidden>
+        <strong>EUD Academy</strong>
+        <span>Campaña de prueba · <code>CUPON004</code></span>
+      </div>
+    </section>
+    <button id="listen" type="button">Activar micrófono</button>
+    <p class="note">La detección se hace en tu dispositivo.</p>
+  </main>
+</body>
+</html>
